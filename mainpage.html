@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD DAIAN ARPON - Online Platform</title>
+    <style>#home {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+    #contact {
+    background-color: darkgrey;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+    #products {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+    #about {
+    background-color: lightpink;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+        /* Body background with vibrant gradient animation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff6f61, #ffc107, #28a745);
+            background-size: 400% 400%;
+            animation: gradientMove 5s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+
+        /* Heading animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6f61, #ffcc00);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.5s;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #ffcc00, #ff6f61);
+            transform: scale(1.1);
+            box-shadow: 0px 8px 15px rgba(255, 102, 0, 0.6);
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            animation: slideIn 1s ease;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .editable {
+            transition: 0.3s ease;
+        }
+
+        .editable:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .settings-button {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            padding: 12px;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .settings-button:hover {
+            background-color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Alpha_01</h1>
+    <p>Your Online Marketplace for All Needs</p>
+</header>
+
+<nav>
+    <a href="newpage.html" id="homeNav">Home</a>
+    <a href="#about" id="aboutNav">About Us</a>
+    <a href="#contact" id="contactNav">Contact</a>
+    <a href="#products" id="productsNav">Products</a>
+    <!-- Link to login page -->
+    <a href="loginpage.html">Admin Login</a>
+</nav>
+
+<div class="main-content">
+    <div class="section" id="home">
+        <h2>Welcome to @lpha_01 Shopping Mall</h2>
+        <p class="editable" id="homeContent">Find everything you need, from the latest gadgets to exclusive offers, all in one place!</p>
+        <a href="https://www.daraz.com.bd" class="cta-button" target="_blank">Start Shopping</a>
+    </div>
+
+    <div class="section" id="products">
+        <h2>Featured Products</h2>
+        <ul class="editable" id="productList">
+            <li>Product 1 - Description</li>
+            <li>Product 2 - Description</li>
+            <li>Product 3 - Description</li>
+        </ul>
+        <a href="https://www.daraz.com.bd" class="cta-button" target="_blank">Browse Products</a>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p class="editable" id="aboutContent" >@lpha_01 is your trusted online marketplace, providing quality products at the best prices. We aim to make shopping easy and enjoyable for you!</p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <a href="mailto:mrdarpon@gmail.com">Gmail</a>
+            <a href="https://m.me/daian.arpon">Messenger</a>
+            <a href="https://wa.me/1234567890">WhatsApp</a>
+        </div>
+    </div>
+</div>
+<br><br>
+<br><footer>
+    <p>© 2025 MD DAIAN ARPON - All Rights Reserved</p>
+</footer>
+      
+<button class="settings-button" onclick="showLoginForm()">⚙️</button>
+
+</body>
+</html>

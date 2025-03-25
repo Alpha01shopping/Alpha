@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Centering the Login Form */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        /* Admin Login Heading Animation */
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            animation: slideIn 2s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ff6600;
+            box-shadow: 0 0 5px rgba(255, 102, 0, 0.6);
+            outline: none;
+        }
+
+        /* Login Button */
+        button {
+            background: linear-gradient(45deg, #ff6600, #ff0066);
+            border: none;
+            padding: 12px;
+            width: 100%;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ffcc00, #ff6600);
+            transform: scale(1.05);
+        }
+
+        /* Back to Main Page Button */
+        .back-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-form" id="loginForm">
+        <h3>Admin Login</h3>
+
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+
+        <button onclick="login()">Login</button>
+
+        <button class="back-btn" onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script>
+        let isAdminLoggedIn = false;
+
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'Arpon' && password === '123456') {
+                alert('Login Successful!');
+                isAdminLoggedIn = true;
+                document.getElementById('loginForm').style.display = 'none';
+                document.body.classList.add('admin-logged');
+            } else {
+                alert('Invalid credentials!');
+            }
+        }
+
+        // Function to return to main page
+        function goBack() {
+            window.location.href = 'mainpage.html'; // Change this URL if needed
+        }
+    </script>
+
+</body>
+</html>
